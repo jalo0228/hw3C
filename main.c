@@ -4,7 +4,7 @@
 #include <math.h>
 
 int digit_sum(int n){
-  if (n >= 10)
+  if (n > 0)
     return n%10 + digit_sum(n/10);
   else 
     return 0;
@@ -13,7 +13,7 @@ int digit_sum(int n){
 
 int main(void) {
   int n = atoi(readline("Enter an int: ")); 
-  printf("sum of digit %d is %d.\n", n , digit_sum(n));
+  printf("sum of digits of %d is %d.\n", n , digit_sum(n));
   return 0;
 }
 
